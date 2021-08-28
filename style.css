@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  height: 70px;
+  background-color: #ec715f;
+}
+
+nav {
+  margin: 0 auto;
+  max-width: 1024px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav img {
+  height: 70px;
+}
+
+ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+ul li {
+  margin: auto 30px;
+  font-size: 16px;
+  display: inline-block;
+}
+
+li a {
+  color: #fafafa;
+  text-decoration: none;
+}
+
+/* メインビジュアル */
+.main-visual {
+  height: 650px;
+  width: 100%;
+  padding-top: 200px;
+  background-image: url(img/mv.png);
+  background-position: center;
+  background-size: 100%;
+}
+
+.main-visual-text {
+  margin-bottom: 10px;
+  font-size: 64px;
+  font-weight: bold;
+  color: #fafafa;
+  text-align: center;
+}
+
+.main-visual-string {
+  font-size: 20px;
+  color: #fafafa;
+  text-align: center;
+}
+
+/* ポートフォリオ */
+.portfolio {
+  width: 100%;
+  padding: 90px 0;
+  background-color: #eceff1;
+}
+
+.portfolio-title,
+.feature-title {
+  font-size: 32px;
+  font-weight: bold;
+  padding-bottom: 8px;
+  color: #000000;
+  text-align: center;
+}
+
+.portfolio-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -80px;
+  display: inline-block;
+  width: 70px;
+  height: 3px;
+  transform: translateX(-50%);
+  background-color: #ec715f;
+}
+
+.text {
+  font-size: 16px;
+  margin: 30px 0;
+  color: #000000;
+  text-align: center;
+}
+
+.image-box {
+  height: 510px;
+  width: 920px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-image {
+  height: 250px;
+  width: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+.portfolio-image:nth-child(1) {
+  background-image: url(img/sketch.jpg);
+  margin-bottom: 10px;
+}
+
+.portfolio-image:nth-child(2) {
+  background-image: url(img/websuku.png);
+  margin: 0 10px 10px 10px;
+}
+
+.portfolio-image:nth-child(3) {
+  background-image: url(img/write.jpg);
+  margin-bottom: 10px;
+}
+
+.portfolio-image:nth-child(4) {
+  background-image: url(img/webcamp.png);
+}
+
+.portfolio-image:nth-child(5) {
+  background-image: url(img/talk.jpg);
+  margin: 0 10px;
+}
+
+.portfolio-image:nth-child(6) {
+  background-image: url(img/webcamp-mother.png);
+}
+
+/* フィーチャ */
+.feature {
+  padding: 90px 0;
+  position: relative;
+}
+
+.feature-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 146px;
+  display: inline-block;
+  width: 70px;
+  height: 3px;
+  transform: translateX(-50%);
+  background-color: #ec715f;
+}
+
+.feature-box {
+  width: 980px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.feature-content {
+  height: auto;
+  width: 320px;
+}
+
+.feature-content:nth-child(2) {
+  margin: 0 10px;
+}
+
+.feature-content i {
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.content-title {
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+}
+
+.content-text {
+  font-size: 16px;
+  color: #000000;
+}
