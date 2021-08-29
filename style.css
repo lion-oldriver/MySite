@@ -14,11 +14,39 @@ nav {
   margin: 0 auto;
   max-width: 1024px;
   display: flex;
-  justify-content: space-between;
 }
 
 nav img {
   height: 70px;
+}
+
+.toggle {
+  width: 40px;
+  height: 40px;
+  margin: 5px 0 0 auto;
+  border: 1px solid white;
+  position: relative;
+  display: none;
+}
+
+.toggle span {
+  display: block;
+  position: absolute;
+  left: 4px;
+  width: 30px;
+  border-bottom: 3px solid white;
+}
+
+.toggle span:nth-child(1) {
+  top: 10px;
+}
+
+.toggle span:nth-child(2) {
+  top: 17px;
+}
+
+.toggle span:nth-child(3) {
+  top: 24px;
 }
 
 ul {
@@ -70,7 +98,9 @@ li a {
 }
 
 .portfolio-title,
-.feature-title {
+.feature-title,
+.profile-title,
+.contact-title {
   font-size: 32px;
   font-weight: bold;
   padding-bottom: 8px;
@@ -141,12 +171,15 @@ li a {
 }
 
 /* フィーチャ */
-.feature {
+.feature,
+.contact {
   padding: 90px 0;
   position: relative;
 }
 
-.feature-title::after {
+.feature-title::after,
+.profile-title::after,
+.contact-title::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -191,4 +224,163 @@ li a {
 .content-text {
   font-size: 16px;
   color: #000000;
+}
+/* プロフィール */
+.profile {
+  width: 100%;
+  padding: 90px 0;
+  position: relative;
+  background-color: #eceff1;
+}
+
+.profile-box {
+  width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-content {
+  width: 50%;
+}
+
+.profile-image {
+  height: 250px;
+  width: 250px;
+  margin: 0 auto;
+  background-image: url(img/my-icon.jpg);
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.introduction-title {
+  margin: 20px 0 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.introduction-title:nth-child(1) {
+  margin: 0 0 5px;
+}
+
+/* コンタクト */
+.contact-box {
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-content {
+  width: 50%;
+}
+
+.content-title {
+  margin: 20px 0 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.content-title:nth-child(odd) {
+  margin: 0 0 5px;
+}
+
+.address-box {
+  margin-left: 35%;
+  display: block;
+}
+
+.contact-box .content-title {
+  text-align: left;
+}
+
+.address-box:nth-child(2) {
+  margin: 20px 0 0 35%;
+}
+
+.sns-box {
+  margin-left: 30%;
+}
+
+.icon-box {
+  display: flex;
+}
+
+.icon-box i {
+  font-size: 45px;
+  margin-right: 20px;
+}
+
+.icon-box i:nth-child(3) {
+  margin: 0;
+}
+
+/* フッター */
+.footer {
+  height: 60px;
+  width: 100%;
+  background-color: #ec715f;
+}
+
+.footer-text {
+  font-size: 16px;
+  color: #fafafa;
+  text-align: center;
+  line-height: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  .header,
+  nav img {
+    height: 50px;
+  }
+
+  nav {
+    width: 90%;
+  }
+
+  ul {
+    display: none;
+  }
+
+  .toggle {
+    display: flex;
+  }
+
+  .main-visual {
+    background-image: url(img/code.png);
+    background-size: cover;
+  }
+
+  .main-visual-text {
+    width: 90%;
+    font-size: 40px;
+  }
+
+  .main-visual-string {
+    width: 90%;
+    font-size: 18px;
+  }
+
+  .text {
+    width: 90%;
+  }
+
+  .image-box {
+    height: auto;
+    width: 90%;
+    display: block;
+  }
+
+  .portfolio-image:nth-child(odd) {
+    display: none;
+  }
+
+  .portfolio-image:nth-child(even) {
+    margin: 0 auto 10px;
+  }
+
+  .portfolio-image:nth-child(6) {
+    margin: 0 auto;
+  }
 }
