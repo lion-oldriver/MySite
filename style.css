@@ -23,7 +23,7 @@ nav img {
 .toggle {
   width: 40px;
   height: 40px;
-  margin: 5px 0 0 auto;
+  margin: 5px 5% 5px auto;
   border: 1px solid white;
   position: relative;
   display: none;
@@ -32,9 +32,9 @@ nav img {
 .toggle span {
   display: block;
   position: absolute;
-  left: 4px;
-  width: 30px;
-  border-bottom: 3px solid white;
+  left: 7px;
+  width: 25px;
+  border-bottom: 2px solid white;
 }
 
 .toggle span:nth-child(1) {
@@ -95,6 +95,7 @@ li a {
   width: 100%;
   padding: 90px 0;
   background-color: #eceff1;
+  position: relative;
 }
 
 .portfolio-title,
@@ -108,11 +109,14 @@ li a {
   text-align: center;
 }
 
-.portfolio-title::after {
+.portfolio-title::after,
+.feature-title::after,
+.profile-title::after,
+.contact-title::after {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: -80px;
+  top: 146px;
   display: inline-block;
   width: 70px;
   height: 3px;
@@ -175,20 +179,6 @@ li a {
 .contact {
   padding: 90px 0;
   position: relative;
-}
-
-.feature-title::after,
-.profile-title::after,
-.contact-title::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 146px;
-  display: inline-block;
-  width: 70px;
-  height: 3px;
-  transform: translateX(-50%);
-  background-color: #ec715f;
 }
 
 .feature-box {
@@ -355,15 +345,18 @@ li a {
   .main-visual-text {
     width: 90%;
     font-size: 40px;
+    margin: 0 auto 10px;
   }
 
   .main-visual-string {
     width: 90%;
     font-size: 18px;
+    margin: 0 auto;
   }
 
   .text {
     width: 90%;
+    margin: 30px auto;
   }
 
   .image-box {
@@ -382,5 +375,75 @@ li a {
 
   .portfolio-image:nth-child(6) {
     margin: 0 auto;
+  }
+
+  .feature-box {
+    width: 90%;
+    display: block;
+  }
+
+  .feature-content {
+    width: 350px;
+    margin: 0 auto;
+  }
+
+  .feature-content:nth-child(2) {
+    margin: 10px auto;
+  }
+
+  .profile-box {
+    width: 90%;
+    display: block;
+  }
+
+  .profile-content {
+    width: 100%;
+  }
+
+  .profile-content:nth-child(1) {
+    margin: 30px 0 20px;
+  }
+
+  .profile-content p {
+    text-align: center;
+  }
+
+  .contact-box {
+    width: 100%;
+    display: block;
+  }
+
+  .contact-content {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .address-box {
+    margin: 0 auto;
+  }
+
+  .address-box:nth-child(1) {
+    margin-top: 30px;
+  }
+
+  .address-box:nth-child(2) {
+    margin: 20px 0;
+  }
+
+  .address-box p,
+  .contact-box .content-title {
+    text-align: center;
+  }
+
+  .sns-box {
+    margin: 0 auto;
+  }
+
+  .icon-box {
+    justify-content: center;
+  }
+
+  .icon-box i {
+    margin-right: 8px;
   }
 }
