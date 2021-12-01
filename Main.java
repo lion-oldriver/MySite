@@ -1,12 +1,19 @@
-// import java.util.Arrays;
+import java.util.Arrays;
 import java.util.List;
+import java.util.regex.*;
 class Main{
   public static void main(String[] args){
-    String str = String.join("-", "Apple", "Grape", "Melon");
-    System.out.println(str);
-
-    List<String> strings = List.of("One", "Two", "Three");
-    String str2 = String.join(" : ", strings);
-    System.out.println(str2);
+    String regex = "(?<!smart)phone";
+    Pattern p = Pattern.compile(regex);
+    String[] ary = {"smart", "smartphone", "applephone"};
+    for (int i=0; i < ary.length; i++){
+      Matcher m = p.matcher(ary[i]);
+      System.out.print(ary[i] + "は");
+      if (m.find()){
+        System.out.println("マッチしました。マッチしたのは" + m.group() + "です");
+      }else{
+        System.out.println("マッチしませんでした");
+      }
+    }
   }
 }
