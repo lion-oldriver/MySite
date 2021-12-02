@@ -14,7 +14,6 @@ class dentaku{
     }catch(NumberFormatException e){
       errDisp("警告: 数値でない値が入力されています");
     }
-
     ope = args[1];
 
     String opeStr[] = {"+", "-", "x", "/"};

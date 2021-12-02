@@ -1,19 +1,25 @@
 import java.util.Arrays;
 import java.util.List;
 import java.util.regex.*;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.LinkedList;
+import java.util.HashMap;
+import java.util.Map;
 class Main{
   public static void main(String[] args){
-    String regex = "(?<!smart)phone";
-    Pattern p = Pattern.compile(regex);
-    String[] ary = {"smart", "smartphone", "applephone"};
-    for (int i=0; i < ary.length; i++){
-      Matcher m = p.matcher(ary[i]);
-      System.out.print(ary[i] + "は");
-      if (m.find()){
-        System.out.println("マッチしました。マッチしたのは" + m.group() + "です");
-      }else{
-        System.out.println("マッチしませんでした");
-      }
-    }
+    HashMap<String,Integer> map = new HashMap<>();
+
+    map.put("リンゴ",80);
+    map.put("オレンジ",120);
+    map.put("ブドウ",90);
+
+    System.out.println(map.get("リンゴ"));
+    map.putIfAbsent("メロン",140);
+    System.out.println(map.containsValue(120));
   }
 }
