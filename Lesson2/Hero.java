@@ -1,6 +1,6 @@
 public class Hero{
   String name;
-  int hp;
+  private int hp;
   Sword sword;
 
   public void attack(Matango m){
@@ -30,6 +30,15 @@ public class Hero{
     System.out.println("GAMEOVER");
     System.out.println("最終HPは" + this.hp + "でした");
   }
+
+  private void die(){
+    System.out.println(this.name + "は死んでしまった");
+    System.out.println("GAMEOVERです");
+  }
+
+  public String getName(){return this.name;}
+  public int getHp(){return this.hp;}
+  public void setHp(int hp){this.hp = hp;}
 
   public Hero(String name){
     this.hp = 100;
